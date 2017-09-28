@@ -40,10 +40,7 @@ public class ProjectileLine : MonoBehaviour
         }
     }
 
-
-
-    // Use this for initialization
-    void Clear()
+    public void Clear()
     {
         _poi = null;
         line.enabled = false;
@@ -51,7 +48,7 @@ public class ProjectileLine : MonoBehaviour
 	}
 	
 	// Update is called once per frame
-	void AddPoint()
+	public void AddPoint()
     {
         Vector3 pt = _poi.transform.position;
         if (points.Count > 0 && (pt - lastPoint).magnitude < minDist)
